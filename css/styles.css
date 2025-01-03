@@ -1,0 +1,620 @@
+/* Estilos generales */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.logo .tagline {
+    font-size: 0.98rem;
+    color: #aaaaaa;
+    margin-top: 5px;
+    text-align: center;
+}
+section {
+    scroll-margin-top: 100px; /* Ajusta este valor según la altura del header */
+}
+
+
+header {
+    background: linear-gradient(90deg, #1a1a1a, #333333);
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    color: #00ffff; /* Azul neón */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ff00ff; /* Púrpura neón */
+}
+
+.hero-section {
+    text-align: center;
+    padding: 5rem 1rem;
+    background: linear-gradient(180deg, #121212, #1a1a1a);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #aaaaaa;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00ffff; /* Azul neón */
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Proyectos */
+.projects-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #1a1a1a;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #222222;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Habilidades */
+.skills-section {
+    padding: 3rem 1rem;
+    background: linear-gradient(180deg, #1a1a1a, #121212);
+    text-align: center;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: #333333; /* Fondo oscuro */
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    margin: 0.5rem;
+    color: #00ffff; /* Azul neón */
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Sombra más fuerte */
+}
+
+
+/* Experiencia */
+.experience-section {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 3rem 1rem;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+}
+
+/* Contacto */
+.contact-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #1a1a1a;
+}
+
+.contact-section form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #222222;
+    color: #ffffff;
+}
+
+/* Botones del formulario */
+.contact-section button {
+    background-color: #00ffff;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.projects-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #1a1a1a;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #222222;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    color: #00ffff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: #aaaaaa;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-card a.btn {
+    display: inline-block;
+    background-color: #00ffff;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a.btn:hover {
+    background-color: #ff00ff;
+}
+
+
+/* Estilo para los enlaces de experiencia */
+.experience-link {
+    text-decoration: none;
+    color: #00ffff; /* Azul neón */
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.experience-link:hover {
+    color: #ff00ff; /* Púrpura neón */
+    transform: translateY(-5px); /* Mover hacia arriba */
+}
+
+/* Animación de subrayado */
+.experience-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #00ffff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.experience-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Footer */
+
+.footer {
+    background: #1a1a1a; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    text-align: center;
+    padding: 2rem 1rem;
+    width: 100%;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: #ffffff; /* Texto blanco */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #00ffff; /* Azul neón */
+    transform: scale(1.1);
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* Cambia el color de los íconos a blanco */
+    transition: transform 0.3s ease;
+}
+
+.footer-link:hover .footer-icon {
+    transform: rotate(360deg); /* Gira el ícono al hacer hover */
+}
+
+/* Header principal */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #1a1a1a, #333333);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo a {
+    font-size: 1.5rem;
+    color: #00ffff; /* Azul neón */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.logo a:hover {
+    color: #ff00ff; /* Púrpura neón */
+}
+
+/* Menú de navegación */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    color:#00ffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #ff00ff; /* Púrpura neón */
+}
+
+/* Toggle para dispositivos móviles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #00ffff; /* Azul neón */
+}
+
+/* Ocultar el nav en dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+}
+
+/*formulario de contacto*/
+.contact-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(180deg, #1a1a1a, #121212);
+    color: #ffffff;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    color: #00ffff;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #222222;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #00ffff;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #333333;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00ffff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn {
+    display: block; /* Asegura que se comporte como un bloque dentro del flexbox */
+    background-color: #00ffff;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    margin: auto;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    max-width: 250px; /* Controla el tamaño máximo */
+}
+
+/* .btn:hover {
+    background-color: #ff00ff;
+    transform: translateY(-3px);
+} */
+
+.btn-contacto {
+    display: block; /* Asegura que se comporte como un bloque dentro del flexbox */
+    background-color: #00ffff;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    margin-left: 35%;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    max-width: 250px; /* Controla el tamaño máximo */
+    text-align: center; /* Centra el texto dentro del botón */
+    background: linear-gradient(145deg, #00e5ff, #00b3cc);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5), -4px -4px 10px rgba(50, 50, 50, 0.2);
+}
+
+.btn-contacto:hover {
+    background: linear-gradient(145deg, #00b3cc, #008da3);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    transform: translateY(-3px);
+}
+/* Ajustes visuales para el formulario */
+.contact-form {
+    max-width: 800px;
+    min-width: 700px;
+    margin: 0 auto;
+    padding: 4rem;
+    background: linear-gradient(145deg, #222222, #1a1a1a);
+    border-radius: 15px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5), -8px -8px 15px rgba(50, 50, 50, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-form:hover {
+    transform: scale(1.02);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6), -10px -10px 20px rgba(50, 50, 50, 0.3);
+}
+
+/* Bordes redondeados */
+.form-group input,
+.form-group textarea {
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1rem;
+    background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.6), inset -4px -4px 8px rgba(50, 50, 50, 0.1);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00ffff;
+    outline: none;
+    background: linear-gradient(145deg, #3a3a3a, #2e2e2e);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), inset 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Efectos en el botón */
+.btn {
+    background: linear-gradient(145deg, #00e5ff, #00b3cc);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5), -4px -4px 10px rgba(50, 50, 50, 0.2);
+}
+
+.btn:hover {
+    background: linear-gradient(145deg, #00b3cc, #008da3);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    transform: translateY(-3px);
+}
+
+/* Placeholder estilizado */
+input::placeholder,
+textarea::placeholder {
+    color: #888888;
+    font-style: italic;
+}
+
+/* Mejora en la tipografía */
+.form-group label {
+    font-weight: bold;
+    color: #00ffff;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Sobre mide*/ 
+.about-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(180deg, #1a1a1a, #121212);
+    color: #ffffff;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    border-radius: 50%;
+    max-width: 150px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #aaaaaa;
+}
+
+.neon-effect {
+    color: #00ffff; /* Color base del texto (neón azul) */
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px rgba(0, 255, 255, 0.5);
+    animation: neon-glow 1s infinite alternate;
+}
+
+/* Animación de neón */
+@keyframes neon-glow {
+    0% {
+        text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px rgba(0, 255, 255, 0.6);
+    }
+}

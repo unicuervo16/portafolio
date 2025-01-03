@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mi Portafolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="js/animations.js"></script>
+        <script src="js/scripts.js"></script>
+    </head>
+<body id="inicio">>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#inicio">Joel Garbagnate</a>
+                <p class="tagline">Desarrollador Full Stack</p>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#about">Acerca de Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    
+  <!-- Sección de bienvenida -->
+  <header class="hero-section">
+    <h1>Bienvenido a Mi Portafolio</h1>
+    <p>Explora mis proyectos y habilidades en desarrollo web.</p>
+    <a href="#proyectos" class="btn">Ver Proyectos</a>
+</header>
+
+<section id="about" class="about-section">
+    <h2>Acerca de Mí</h2>
+    <div class="about-content">
+        <p>
+            Soy Joel Garbagnate, un desarrollador Full Stack apasionado por la tecnología y la creación de soluciones innovadoras.
+            Cuento con experiencia en tecnologías como 
+            <span class="neon-effect">.NET</span>, 
+            <span class="neon-effect">C#</span>, 
+            <span class="neon-effect">JavaScript</span>, 
+            <span class="neon-effect">HTML</span>, 
+            <span class="neon-effect">CSS</span>, 
+            <span class="neon-effect">PHP</span>, 
+            <span class="neon-effect">Blazor</span>, 
+            <span class="neon-effect">Symfony</span> 
+            y <span class="neon-effect">bases de datos SQL</span>.
+        </p>
+        
+        <p>
+            Estoy en constante formación y actualización en el área de tecnología. Actualmente, curso la Tecnicatura Superior en Programación, 
+            con la meta de continuar mi formación y completar la Ingeniería en Software una vez finalizada la tecnicatura.
+        </p>
+        <p>
+            Más allá de mi interés por el desarrollo de software, disfruto explorando nuevas tecnologías, enfrentando proyectos desafiantes 
+            y perfeccionando mis habilidades en lógica de programación, diseño y arquitectura de software.
+        </p>        
+    </div>
+</section>
+
+<!-- Sección de proyectos -->
+<section id="proyectos" class="projects-section">
+    <h2>Proyectos Destacados</h2>
+    <div class="projects-grid">
+        <!-- Proyecto 1: Consultora CIPEF -->
+        <div class="project-card">
+            <img src="assets/images/CIPEF.png" alt="Consultora CIPEF">
+            <h3>Consultora CIPEF</h3>
+            <p>Sitio web desarrollado con WordPress y Elementor, especializado en consultoría profesional.</p>
+            <p><strong>Tecnologías:</strong> WordPress, PHP, Elementor, Plugins, HTML, CSS</p>
+            <a href="https://consultoracipef.com.ar/" target="_blank" class="btn">Visitar Sitio</a>
+        </div>
+        <!-- Proyecto 2: Restaurante Portico -->
+        <div class="project-card">
+            <img src="assets/images/PORTICO.png" alt="Restaurante Portico">
+            <h3>Restaurante Portico</h3>
+            <p>Restaurante creado con una arquitectura robusta y diseño responsivo.</p>
+            <p><strong>Tecnologías:</strong> .NET 8, SQL, Bootstrap, JS, HTML, CSS</p>
+            <a href="https://restauranteporticobarcelona.es/" target="_blank" class="btn">Visitar Sitio</a>
+        </div>
+        <!-- Proyecto 3: XR Neurosalud -->
+        <div class="project-card">
+            <img src="assets/images/XR.png" alt="XR Neurosalud">
+            <h3>XR Neurosalud</h3>
+            <p>Portal para logopedas y pacientes con sesiones, citas, calendario, documentos y gráficos personalizados.</p>
+            <p><strong>Tecnologías:</strong> .NET 6, SQL, Bootstrap, JS, librerías personalizadas</p>
+            <a href="https://neurosaludxr.com/" target="_blank" class="btn">Visitar Sitio</a>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de habilidades -->
+<section id="habilidades" class="skills-section">
+    <h2>Habilidades</h2>
+    <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Blazor</li>
+        <li>.NET</li>
+        <li>PHP</li>
+        <li>Symfony</li>
+        <li>MySQL</li>
+        <li>SQL</li>
+    </ul>
+</section>
+
+
+<!-- Sección de experiencia -->
+<section id="experiencia" class="experience-section">
+    <h2>Experiencia</h2>
+    <div class="experience-timeline">
+        <!-- Gobierno de la Provincia de Santa Fe -->
+        <div class="timeline-item">
+            <h3>
+                <a href="https://www.santafe.gov.ar/" target="_blank" class="experience-link">
+                    Desarrollador Full Stack PHP y Symfony | Gobierno de la Provincia de Santa Fe
+                </a>
+            </h3>
+            <span>Septiembre 2024 - Presente</span>
+            <p>Desempeño en la sectorial de informática del Ministerio de Salud. Gestión y migración de proyectos internos, desarrollo de nuevas funcionalidades y pantallas, y aplicación de seguridad. Integración de servicios externos entre ministerios para optimizar los sistemas de gestión.</p>
+        </div>
+        <!-- NeyTI SAS -->
+        <div class="timeline-item">
+            <h3>
+                <a href="https://neyti.com.ar/wp/" target="_blank" class="experience-link">
+                    Frontend Blazor Developer | NeyTI SAS
+                </a>
+            </h3>
+            <span>Junio 2024 - Octubre 2024</span>
+            <p>Desarrollo de aplicaciones web con Blazor y Syncfusion. Integración de APIs y manejo de proyectos mediante Azure DevOps y JIRA. Uso de Swagger para documentar APIs y SQL Server para gestión de datos.</p>
+        </div>
+        <!-- XRNeurosalud -->
+        <div class="timeline-item">
+            <h3>
+                <a href="https://neurosaludxr.com/" target="_blank" class="experience-link">
+                    Full Stack Developer | XRNeurosalud
+                </a>
+            </h3>
+            <span>Julio 2023 - Septiembre 2024</span>
+            <p>Desarrollo de un sistema web para logopedas. Implementación de calendarios personalizados, gráficos interactivos, y autenticación mediante JWT. Uso de tecnologías como .NET 6, SQL, Razor Pages, Chart.js, Full Calendar y Azure DevOps.</p>
+        </div>
+        <!-- Servicios Viales -->
+        <div class="timeline-item">
+            <h3>
+                <a href="https://sv.com.ar/" target="_blank" class="experience-link">
+                    Desarrollador Web Full Stack | Servicios Viales
+                </a>
+            </h3>
+            <span>Enero 2023 - Junio 2023</span>
+            <p>Planificación y desarrollo de sitios web con HTML, CSS, JavaScript y WordPress. Implementación de bases de datos SQL y generación de informes avanzados en Excel con macros. Evaluación de plataformas Low Code como Genexus.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de contacto -->
+<section id="contacto" class="contact-section">
+    <h2 style="color:#ffffff">Contacto</h2>
+    <form action="https://formspree.io/f/mwppwvyy" method="POST" class="contact-form">
+        <div class="form-group">
+            <label for="nombre">Tu Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre..." required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Tu Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Escribe tu correo..." required>
+        </div>
+        
+        <div class="form-group">
+            <label for="mensaje">Tu Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+        </div>
+        
+        <button type="submit" class="btn-contacto">Enviar</button>
+    </form>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/joel-garbagnate-platini/" target="_blank" class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24px" height="24px">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.372c-.966 0-1.75-.783-1.75-1.749s.784-1.749 1.75-1.749c.965 0 1.75.783 1.75 1.749s-.785 1.749-1.75 1.749zm13.5 11.372h-3v-5.539c0-3.367-4-3.108-4 0v5.539h-3v-10h3v1.422c1.396-2.586 7-2.777 7 2.476v6.102z"/>
+            </svg>
+            LinkedIn
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://api.whatsapp.com/send?phone=543424276286" target="_blank" class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24px" height="24px" fill="white">
+                <path d="M16.01 3.57c-6.9 0-12.5 5.6-12.5 12.5 0 2.19.58 4.29 1.68 6.15l-1.8 6.6 6.8-1.78c1.8 1 3.8 1.57 5.82 1.57 6.9 0 12.5-5.6 12.5-12.5 0-6.89-5.61-12.49-12.5-12.49zm0 23.59c-1.82 0-3.58-.46-5.14-1.33l-.37-.21-4.06 1.06 1.08-4.01-.25-.41c-1.05-1.76-1.61-3.79-1.61-5.88 0-6.02 4.9-10.91 10.92-10.91 6.02 0 10.91 4.89 10.91 10.91 0 6.01-4.9 10.91-10.91 10.91zm5.69-7.56c-.31-.16-1.83-.91-2.11-1.01-.28-.1-.49-.15-.7.15-.2.31-.81 1-1 1.2-.18.2-.36.22-.66.07-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.81-1.71-2.11-.18-.31-.02-.48.14-.63.15-.15.31-.36.46-.54.15-.18.2-.31.31-.52.1-.2.05-.38-.02-.53-.08-.15-.7-1.7-.95-2.31-.25-.61-.51-.53-.7-.53-.18 0-.39-.02-.61-.02-.22 0-.56.08-.85.38-.29.31-1.12 1.09-1.12 2.66 0 1.56 1.14 3.07 1.3 3.28.15.2 2.23 3.4 5.41 4.76.76.33 1.35.53 1.81.68.76.24 1.45.21 2 .13.61-.09 1.83-.75 2.09-1.47.26-.71.26-1.32.18-1.46-.08-.13-.28-.2-.59-.36z"/>
+            </svg>
+            WhatsApp
+        </a>
+    </div>
+</footer>
+
+<script src="scripts.js">
+    gsap.registerPlugin(ScrollTrigger);
+</script>
+</body>
+</html>
