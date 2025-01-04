@@ -414,14 +414,14 @@ header {
     margin-bottom: 2rem;
 }
 
-.contact-form {
+/* .contact-form {
     max-width: 600px;
     margin: 0 auto;
     padding: 2rem;
     background: #222222;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .form-group {
     margin-bottom: 1.5rem;
@@ -485,7 +485,7 @@ textarea {
     background-color: #00ffff;
     color: #ffffff;
     padding: 0.8rem 1.5rem;
-    margin-left: 35%;
+    margin-left: 25%;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -507,8 +507,9 @@ textarea {
 /* Ajustes visuales para el formulario */
 .contact-form {
     max-width: 800px;
-    min-width: 700px;
+    /*min-width: 700px;*/
     width: 90%;
+    align-items: stretch;
     margin: 0 auto;
     padding: 4rem;
     background: linear-gradient(145deg, #222222, #1a1a1a);
@@ -516,6 +517,25 @@ textarea {
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5), -8px -8px 15px rgba(50, 50, 50, 0.2);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+@media (max-width: 768px) {
+    .contact-form {
+        max-width: 100%; /* Usa todo el ancho disponible */
+        padding: 1rem; /* Reduce el padding */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        max-width: 450px;
+        font-size: 0.85rem; /* Ajusta el tamaño de fuente */
+    }
+
+    .btn-contacto {
+        max-width: 150px; /* Reduce el tamaño del botón */
+        font-size: 0.9rem;
+        margin: auto;
+    }
+}
+
 
 .contact-form:hover {
     transform: scale(1.02);
