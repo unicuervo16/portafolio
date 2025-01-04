@@ -525,7 +525,8 @@ textarea {
 
     .form-group input,
     .form-group textarea {
-        max-width: 450px;
+        margin:auto;
+        width: 90%;
         font-size: 0.85rem; /* Ajusta el tamaño de fuente */
     }
 
