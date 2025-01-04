@@ -55,6 +55,7 @@ header {
 .hero-section {
     text-align: center;
     padding: 5rem 1rem;
+    margin-top: 50px;;
     background: linear-gradient(180deg, #121212, #1a1a1a);
 }
 
@@ -664,3 +665,5 @@ textarea::placeholder {
     transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
     cursor: pointer;
 }
+
+/*navbar*/
