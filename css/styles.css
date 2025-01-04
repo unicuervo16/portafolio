@@ -508,6 +508,7 @@ textarea {
 .contact-form {
     max-width: 800px;
     min-width: 700px;
+    width: 90%;
     margin: 0 auto;
     padding: 4rem;
     background: linear-gradient(145deg, #222222, #1a1a1a);
