@@ -519,10 +519,13 @@ textarea {
 }
 @media (max-width: 768px) {
     .contact-form {
-        max-width: 100%; /* Usa todo el ancho disponible */
+        max-width: 90%; /* Usa todo el ancho disponible */
         padding: 1rem; /* Reduce el padding */
+        scroll-behavior: smooth;
     }
-
+    body{
+        scroll-behavior: smooth!important;
+    }
     .form-group input,
     .form-group textarea {
         margin:auto;
