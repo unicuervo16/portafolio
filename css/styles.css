@@ -643,3 +643,24 @@ textarea::placeholder {
         text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px rgba(0, 255, 255, 0.6);
     }
 }
+.language-switcher {
+    position: fixed; /* Opcional: Fija las banderas en un lugar visible */
+    top: 20px; /* Ajusta según tu diseño */
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.flag-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%; /* Hace las banderas circulares */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.flag-icon:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    cursor: pointer;
+}
