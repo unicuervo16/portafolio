@@ -94,3 +94,17 @@ document.addEventListener("DOMContentLoaded", function () {
     animateFooterLinks();
     enableSmoothScroll();
 });
+
+/*cv*/
+document.getElementById("cvButton").addEventListener("click", function (e) {
+    e.preventDefault(); // Evita la redirección inicial
+    const button = e.target.closest(".btn-cv");
+
+    // Agrega la clase para la animación de desaparición
+    button.classList.add("animate");
+
+    // Redirecciona después de la animación
+    setTimeout(() => {
+        window.open(button.href, "_blank");
+    }, 900); // La duración coincide con la animación CSS
+});

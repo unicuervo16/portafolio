@@ -666,4 +666,74 @@ textarea::placeholder {
     cursor: pointer;
 }
 
-/*navbar*/
+/*cv*/
+.cv-download {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.btn-cv {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: linear-gradient(145deg, #00b3cc, #007a99);
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3), -4px -4px 10px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    width: 200px;
+    text-align: center;
+    gap: 10px;
+}
+
+.btn-cv .cv-text {
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+.btn-cv .cv-icon {
+    position: absolute;
+    right: 50%;
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.btn-cv:hover .cv-text {
+    opacity: 0;
+    transform: translateX(-20%);
+}
+
+.btn-cv:hover .cv-icon {
+    opacity: 1;
+    transform: translateX(50%);
+}
+
+.btn-cv:hover {
+    transform: scale(1.05);
+}
+
+/* Animación de desaparición */
+.btn-cv.animate {
+    animation: slide-out 0.8s forwards ease-in-out;
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
