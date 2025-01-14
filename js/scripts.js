@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ScrollTrigger para habilidades
     ScrollTrigger.create({
         trigger: ".skills-section",
-        start: "top 80%",
+        start: "top 90%",
         onEnter: () => animateSkills(),
     });
 
@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
         gsap.from(".timeline-item", {
             scrollTrigger: {
                 trigger: "#experiencia",
-                start: "top 80%",
-                toggleActions: "play none none reset", 
+                start: "top 90%",
+                toggleActions: "play none none reset",
             },
             x: -200,
             opacity: 0,
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         gsap.from(".timeline-item h3", {
             scrollTrigger: {
                 trigger: "#experiencia",
-                start: "top 80%",
+                start: "top 90%",
                 toggleActions: "play none none reset",
             },
             x: -200,
@@ -88,30 +88,28 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
     animateSkills();
     animateExperience();
     animateExperienceTitles();
     animateFooterLinks();
     enableSmoothScroll();
-
-    // Refresca ScrollTrigger después de un ligero retraso
-    setTimeout(() => {
-        ScrollTrigger.refresh();
-    }, 500);
-
-    /*cv*/
-    document.getElementById("cvButton").addEventListener("click", function (e) {
-        e.preventDefault(); // Evita la redirección inicial
-        const button = e.target.closest(".btn-cv");
-
-        // Agrega la clase para la animación de desaparición
-        button.classList.add("animate");
-
-        // Redirecciona después de la animación
-        setTimeout(() => {
-            window.open(button.href, "_blank");
-        }, 900); // La duración coincide con la animación CSS
-    });
+    
 });
+    // Validar existencia de cvButton
+    const cvButton = document.getElementById("cvButton");
+    if (cvButton) {
+        cvButton.addEventListener("click", function (e) {
+            e.preventDefault(); // Evita la redirección inicial
+            const button = e.target.closest(".btn-cv");
 
+            // Agrega la clase para la animación de desaparición
+            button.classList.add("animate");
+
+            // Redirecciona después de la animación
+            setTimeout(() => {
+                window.open(button.href, "_blank");
+            }, 900); // La duración coincide con la animación CSS
+        });
+    }
 
