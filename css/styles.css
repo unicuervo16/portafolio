@@ -737,3 +737,16 @@ textarea::placeholder {
         opacity: 0;
     }
 }
+/*graficos*/
+#skillsChart {
+    max-width: 900px; /* Tamaño máximo del canvas */
+    min-width: 500px; /* Tamaño mínimo del canvas */
+    max-height: 900px; /* Tamaño máximo del canvas */
+    min-height: 500px; /* Tamaño mínimo del canvas */
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: block; /* Necesario para el centrado con margin */
+    padding: 10px; /* Espaciado opcional */
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    box-shadow: 0px 4px 6px rgba(253, 253, 253, 0.1); /* Sombra opcional */
+}
+

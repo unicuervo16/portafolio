@@ -9,8 +9,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-        <script src="js/animations.js"></script>
         <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
 <body id="inicio">
     <header class="main-header">
@@ -89,30 +89,51 @@
     <div class="projects-grid">
         <!-- Proyecto 1: Consultora CIPEF -->
         <div class="project-card">
-            <img src="assets/images/CIPEF.png" alt="Consultora CIPEF">
-            <h3>Consultora CIPEF</h3>
-            <p>Sitio web desarrollado con WordPress y Elementor, especializado en consultoría profesional.</p>
-            <p><strong>Tecnologías:</strong> WordPress, PHP, Elementor, Plugins, HTML, CSS</p>
-            <a href="https://consultoracipef.com.ar/" target="_blank" class="btn">Visitar Sitio</a>
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="assets/images/CIPEF.png" alt="Consultora CIPEF">
+                    <h3>Consultora CIPEF</h3>
+                </div>
+                <div class="card-back">
+                    <p>Sitio web desarrollado con WordPress y Elementor, especializado en consultoría profesional.</p>
+                    <p><strong>Tecnologías:</strong> WordPress, PHP, Elementor, Plugins, HTML, CSS</p>
+                    <a href="https://consultoracipef.com.ar/" target="_blank" class="btn">Visitar Sitio</a>
+                </div>
+            </div>
         </div>
+
         <!-- Proyecto 2: Restaurante Portico -->
         <div class="project-card">
-            <img src="assets/images/PORTICO.png" alt="Restaurante Portico">
-            <h3>Restaurante Portico</h3>
-            <p>Restaurante creado con una arquitectura robusta y diseño responsivo.</p>
-            <p><strong>Tecnologías:</strong> .NET 8, SQL, Bootstrap, JS, HTML, CSS</p>
-            <a href="https://restauranteporticobarcelona.es/" target="_blank" class="btn">Visitar Sitio</a>
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="assets/images/PORTICO.png" alt="Restaurante Portico">
+                    <h3>Restaurante Portico</h3>
+                </div>
+                <div class="card-back">
+                    <p>Restaurante creado con una arquitectura robusta y diseño responsivo.</p>
+                    <p><strong>Tecnologías:</strong> .NET 8, SQL, Bootstrap, JS, HTML, CSS</p>
+                    <a href="https://restauranteporticobarcelona.es/" target="_blank" class="btn">Visitar Sitio</a>
+                </div>
+            </div>
         </div>
+
         <!-- Proyecto 3: XR Neurosalud -->
         <div class="project-card">
-            <img src="assets/images/XR.png" alt="XR Neurosalud">
-            <h3>XR Neurosalud</h3>
-            <p>Portal para logopedas y pacientes con sesiones, citas, calendario, documentos y gráficos personalizados.</p>
-            <p><strong>Tecnologías:</strong> .NET 6, SQL, Bootstrap, JS, librerías personalizadas</p>
-            <a href="https://neurosaludxr.com/" target="_blank" class="btn">Visitar Sitio</a>
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="assets/images/XR.png" alt="XR Neurosalud">
+                    <h3>XR Neurosalud</h3>
+                </div>
+                <div class="card-back">
+                    <p>Portal para logopedas y pacientes con sesiones, citas, calendario, documentos y gráficos personalizados.</p>
+                    <p><strong>Tecnologías:</strong> .NET 6, SQL, Bootstrap, JS, librerías personalizadas</p>
+                    <a href="https://neurosaludxr.com/" target="_blank" class="btn">Visitar Sitio</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
 
 <!-- Sección de habilidades -->
 <section id="habilidades" class="skills-section">
@@ -129,6 +150,10 @@
         <li>SQL</li>
     </ul>
 </section>
+
+
+<canvas id="skillsChart" width="300" height="300"></canvas>
+
 
 
 <!-- Sección de experiencia -->
@@ -221,8 +246,23 @@
     </div>
 </footer>
 
-<script src="scripts.js">
+<script src="js/scripts.js">
     gsap.registerPlugin(ScrollTrigger);
+
+    window.onload = function () {
+        gsap.registerPlugin(ScrollTrigger);
+    
+        // Resto de las animaciones...
+        animateSkills();
+        animateExperience();
+        animateExperienceTitles();
+        animateFooterLinks();
+        enableSmoothScroll();
+    
+        // Refresca ScrollTrigger
+        ScrollTrigger.refresh();
+    };
 </script>
+<script src="js/skillsChart.js"></script>
 </body>
 </html>

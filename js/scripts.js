@@ -93,18 +93,25 @@ document.addEventListener("DOMContentLoaded", function () {
     animateExperienceTitles();
     animateFooterLinks();
     enableSmoothScroll();
-});
 
-/*cv*/
-document.getElementById("cvButton").addEventListener("click", function (e) {
-    e.preventDefault(); // Evita la redirección inicial
-    const button = e.target.closest(".btn-cv");
-
-    // Agrega la clase para la animación de desaparición
-    button.classList.add("animate");
-
-    // Redirecciona después de la animación
+    // Refresca ScrollTrigger después de un ligero retraso
     setTimeout(() => {
-        window.open(button.href, "_blank");
-    }, 900); // La duración coincide con la animación CSS
+        ScrollTrigger.refresh();
+    }, 500);
+
+    /*cv*/
+    document.getElementById("cvButton").addEventListener("click", function (e) {
+        e.preventDefault(); // Evita la redirección inicial
+        const button = e.target.closest(".btn-cv");
+
+        // Agrega la clase para la animación de desaparición
+        button.classList.add("animate");
+
+        // Redirecciona después de la animación
+        setTimeout(() => {
+            window.open(button.href, "_blank");
+        }, 900); // La duración coincide con la animación CSS
+    });
 });
+
+
