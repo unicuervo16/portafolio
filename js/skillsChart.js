@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         skillsChartInstance = new Chart(ctx, {
             type: 'pie', // Tipo de gráfico
             data: {
-                labels: ['HTML', 'CSS', 'JavaScript', 'Blazor', '.NET', 'PHP', 'Symfony', 'Python', 'AWS'],
+                labels: ['HTML', 'CSS', 'JavaScript', 'Blazor', '.NET', 'PHP', 'Symfony', 'AWS', 'Python'],
                 datasets: [{
                     label: 'Habilidades',
                     data: [95, 95, 85, 70, 85, 90,65, 80, 70],
@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         'rgba(95, 15, 255, 0.2)',
                         'rgba(9, 66, 255, 0.2)',
                         'rgba(96, 255, 82, 0.2)',
-                        'rgba(12, 143, 0, 0.2)',
                         'rgba(237, 247, 103, 0.2)',
+                        'rgba(12, 143, 0, 0.2)',
                     ],
                     borderColor: [
                         'rgb(255, 255, 255)',
@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         'rgba(153, 102, 255, 1)',
                         'rgb(64, 153, 255)',
                         'rgb(84, 255, 92)',
-                        'rgb(1, 92, 6)',
                         'rgb(222, 224, 79)',
+                        'rgb(1, 92, 6)',
                     ],
                     borderWidth: 2,
                 }]
