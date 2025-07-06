@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkRoom</title>
+    <link rel="stylesheet" href="../css/darkroom.css">
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            overflow: hidden;
+            cursor: none;
+            position: relative;
+            height: 100vh;
+        }
+
+        .cards-container {
+            position: relative;
+            width: 90vw;
+            height: 90vh;
+            margin: 5vh auto;
+        }
+
+        .card {
+            position: absolute;
+            width: 180px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+
+        .card.illuminated {
+            opacity: 0.7;
+            filter: blur(1px);
+        }
+
+        .card.open {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 80%;
+            background: rgba(255, 255, 255, 0.95);
+            opacity: 1;
+            filter: blur(0);
+            z-index: 999;
+            transition: all 0.5s ease-in-out;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: red;
+            color: white;
+            border: none;
+            font-size: 20px;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .card.open .close-btn {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="darkroom-container">
+        <div class="light"></div>
+        
+        <!-- Contenedor de tarjetas distribuidas dinámicamente -->
+        <div class="cards-container">
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const cardData = [
+                        { src: "../assets/Certificados/Certificado-Bootcamp.png", text: "Bootcamp .NET" },
+                        { src: "../assets/Certificados/Cybersecurity_Essentials_page.jpg", text: "Ciberseguridad" },
+                        { src: "../assets/Certificados/Data_Analyst.jpg", text: "Analisis de Datos" },
+                        { src: "../assets/Certificados/NET.jpg", text: "Programador .NET" },
+                        { src: "../assets/Certificados/PHP-MySQL.jpg", text: "Programador PHP y MySQL" },
+                        { src: "../assets/Certificados/WordPress.jpg", text: "Programador Wordpress" }
+                    ];
+
+                    const container = document.querySelector(".cards-container");
+                    cardData.forEach((data, index) => {
+                        const card = document.createElement("div");
+                        card.classList.add("card");
+                        card.style.top = `${Math.random() * 80 + 5}%`;
+                        card.style.left = `${Math.random() * 80 + 5}%`;
+                        card.innerHTML = `<img src="${data.src}" alt="${data.text}"><p>${data.text}</p>`;
+                        container.appendChild(card);
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <script src="../js/darkroom.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const light = document.querySelector(".light");
+            const cards = document.querySelectorAll(".card");
+            let lightOn = true;
+            let openCard = null;
+
+            document.addEventListener("mousemove", function (e) {
+                if (lightOn) {
+                    light.style.left = `${e.clientX}px`;
+                    light.style.top = `${e.clientY}px`;
+                }
+            });
+
+            document.addEventListener("click", function (e) {
+                if (e.target.closest(".card") && !e.target.classList.contains("close-btn")) {
+                    if (openCard) {
+                        openCard.classList.remove("open");
+                        openCard.innerHTML = openCard.dataset.originalContent;
+                    }
+                    openCard = e.target.closest(".card");
+                    openCard.dataset.originalContent = openCard.innerHTML;
+                    openCard.classList.add("open");
+                    openCard.style.top = "50%";
+                    openCard.style.left = "50%";
+                    openCard.style.transform = "translate(-50%, -50%)";
+
+                    let closeBtn = document.createElement("button");
+                    closeBtn.classList.add("close-btn");
+                    closeBtn.innerText = "X";
+                    closeBtn.onclick = function () {
+                        openCard.classList.remove("open");
+                        openCard.innerHTML = openCard.dataset.originalContent;
+                        openCard = null;
+                    };
+
+                    let contentWrapper = document.createElement("div");
+                    contentWrapper.classList.add("card-content");
+                    contentWrapper.appendChild(openCard.querySelector("img"));
+                    contentWrapper.appendChild(openCard.querySelector("p"));
+                    openCard.innerHTML = "";
+                    openCard.appendChild(closeBtn);
+                    openCard.appendChild(contentWrapper);
+                }
+            });
+
+            document.addEventListener("contextmenu", function (e) {
+                e.preventDefault();
+                lightOn = !lightOn;
+                light.style.display = lightOn ? "block" : "none";
+            });
+        });
+    </script>
+</body>
+</html>

@@ -2,6 +2,12 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portafolio de Joel Garbagnate, desarrollador Full Stack con experiencia en .NET, PHP, Blazor y más.">
+        <meta property="og:title" content="Portafolio de Joel Garbagnate">
+        <meta property="og:description" content="Explora mis proyectos y habilidades en desarrollo web.">
+        <meta property="og:image" content="assets/images/preview.jpg">
+        <meta name="twitter:card" content="summary_large_image">
         <title>My Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
@@ -58,6 +64,17 @@
         </a>
     </div>       
 </header>
+
+    <!-- Cartel colgante DarkRoom -->
+    <div class="darkroom-sign-container">
+        <div class="rope"></div>
+        <a href="DarkRoom/DarkRoom.html" class="darkroom-sign">DarkRoom</a>
+        <div class="spider-web"></div>
+    </div>
+
+    <!-- Polvo flotando -->
+    <div class="dust-container"></div>
+
 
 <section id="about" class="about-section">
     <h2>About Me</h2>
@@ -235,5 +252,45 @@
     gsap.registerPlugin(ScrollTrigger);
 </script>
 <script src="js/skillsChart.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        gsap.to(".darkroom-sign-container", {
+            y: 150,
+            duration: 2,
+            ease: "bounce.out"
+        });
+
+        gsap.to(".darkroom-sign", {
+            rotation: -5,
+            yoyo: true,
+            repeat: -1,
+            ease: "power1.inOut",
+            duration: 3
+        });
+
+        // Generar partículas de polvo
+        function createDust() {
+            const dustContainer = document.querySelector(".dust-container");
+            for (let i = 0; i < 15; i++) {
+                let dust = document.createElement("div");
+                dust.classList.add("dust");
+                dust.style.left = Math.random() * 100 + "vw";
+                dust.style.top = Math.random() * 30 + "vh";
+                dustContainer.appendChild(dust);
+                
+                gsap.to(dust, {
+                    y: 100,
+                    opacity: 1,
+                    duration: Math.random() * 3 + 2,
+                    ease: "linear",
+                    repeat: -1,
+                    delay: Math.random() * 5
+                });
+            }
+        }
+
+        createDust();
+    });
+</script>
 </body>
 </html>

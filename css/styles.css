@@ -750,3 +750,92 @@ textarea::placeholder {
     box-shadow: 0px 4px 6px rgba(253, 253, 253, 0.1); /* Sombra opcional */
 }
 
+/*Dark Room*/
+.darkroom-sign-container {
+    position: fixed;
+    top: -190px;
+    left: 10%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+.rope {
+    width: 4px;
+    height: 190px;
+    background: gray;
+}
+.darkroom-sign {
+    background: #111;
+    color: #f8f8f8;
+    font-size: 24px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.8), 0px 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+}
+
+
+/* 🔹 Telarañas realistas en la esquina superior derecha */
+.spider-web {
+position: absolute;
+top: 180px;
+right: -5px;
+width: 40px;
+height: 40px;
+background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10 Q80 40 90 90 M50 10 Q20 40 10 90" stroke="%23f8f8f8" stroke-width="1.5" fill="none"/><path d="M50 10 L90 90 M50 10 L10 90" stroke="%23f8f8f8" stroke-width="1" fill="none"/></svg>') no-repeat center;
+background-size: contain;
+opacity: 0.4;
+}
+
+/* Telarañas en las esquinas */
+.darkroom-sign::before, .darkroom-sign::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100"><path d="M10,10 Q50,50 90,10 T180,10" stroke="%23888888" stroke-width="3" fill="none"/></svg>') no-repeat center;
+    background-size: contain;
+    opacity: 0.5;
+}
+
+.darkroom-sign::before {
+    top: 10px;
+    left: 10px;
+    transform: rotate(-15deg);
+}
+
+.darkroom-sign::after {
+    bottom: 5px;
+    right: 15px;
+    transform: rotate(10deg);
+}
+
+/* Polvo flotando */
+.dust-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.dust {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+
+/*Dentro de DarkRoom*/
