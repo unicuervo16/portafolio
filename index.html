@@ -1,319 +1,401 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Portafolio de Joel Garbagnate, desarrollador Full Stack con experiencia en .NET, PHP, Blazor y más.">
-        <meta property="og:title" content="Portafolio de Joel Garbagnate">
-        <meta property="og:description" content="Explora mis proyectos y habilidades en desarrollo web.">
-        <meta property="og:image" content="assets/images/preview.jpg">
-        <meta name="twitter:card" content="summary_large_image">
-        <title>Mi Portafolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/styles.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    </head>
-<body id="inicio">
-    <header class="main-header">
-        <nav class="navbar">
-            <div class="logo">
-                <a href="#inicio">Joel Garbagnate</a>
-                <p class="tagline">Desarrollador Full Stack</p>
-            </div>
-            
-            <ul class="nav-menu">
-                <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
-                <li><a href="#about"><i class="fas fa-user"></i> Acerca de Mí</a></li>
-                <li><a href="#proyectos"><i class="fas fa-project-diagram"></i> Proyectos</a></li>
-                <li><a href="#habilidades"><i class="fas fa-tools"></i> Habilidades</a></li>
-                <li><a href="#experiencia"><i class="fas fa-briefcase"></i> Experiencia</a></li>
-                <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
-            </ul>
-            <div class="language-switcher">
-                <a href="index.html">
-                    <img src="assets/images/ar.svg" alt="Español" class="flag-icon">
-                </a>
-                <a href="index-english.html">
-                    <img src="assets/images/gb.svg" alt="English" class="flag-icon">
-                </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Joel Garbagnate. Liderazgo de sistemas IT, analisis funcional y desarrollo para operaciones, continuidad y modernizacion.">
+    <meta property="og:title" content="Joel Garbagnate | Sistemas IT y Desarrollo">
+    <meta property="og:description" content="Liderazgo IT, analisis funcional, continuidad operativa y ejecucion tecnica sobre sistemas reales.">
+    <meta property="og:image" content="assets/images/XR.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Joel Garbagnate | Sistemas IT y Desarrollo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+</head>
+<body id="top">
+    <div class="scroll-progress" data-scroll-progress></div>
+    <div class="page-aurora page-aurora-a"></div>
+    <div class="page-aurora page-aurora-b"></div>
+    <div class="page-grid"></div>
+
+    <header class="site-header" data-header>
+        <nav class="site-nav">
+            <a class="brand" href="#top">
+                <span class="brand-mark">JG</span>
+                <span class="brand-copy">
+                    <span>Joel Garbagnate</span>
+                    <span>Liderazgo de Sistemas IT</span>
+                </span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-panel" id="nav-menu" data-nav-panel>
+                <a href="#about">Perfil</a>
+                <a href="#positioning">Enfoque</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#experience">Experiencia</a>
+                <a href="#contact">Contacto</a>
+                <div class="language-switcher">
+                    <a href="index.html" aria-current="page">
+                        <img src="assets/images/ar.svg" alt="Espanol">
+                    </a>
+                    <a href="index-english.html">
+                        <img src="assets/images/gb.svg" alt="English">
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
-    
-  <!-- Sección de bienvenida -->
-  <header class="hero-section">
-    <h1>Bienvenido a Mi Portafolio</h1>
-    <p>Explora mis proyectos y habilidades en desarrollo web.</p>
-    <a href="#proyectos" class="btn">Ver Proyectos</a>
-    <div class="cv-download">
-        <a href="https://drive.google.com/uc?export=download&id=1qiGY-LhVaxYHmHJNk7tiSbyOKhGH8IX-" 
-           target="_blank" class="btn-cv" id="cvButton">
-            <span class="cv-text">Descarga mi CV</span>
-            <span class="cv-icon"><i class="fas fa-file-alt"></i></span>
-        </a>
-    </div> 
-</header>
 
-    <!-- Cartel colgante DarkRoom -->
-     <!--  <div class="darkroom-sign-container">
-        <div class="rope"></div>
-        <a href="DarkRoom/DarkRoom.html" class="darkroom-sign">DarkRoom</a>
-        <div class="spider-web"></div>
-    </div>  -->
-
-    <!-- Polvo flotando -->
-     <!--<div class="dust-container"></div>-->
-
-<section id="about" class="about-section">
-    <h2>Acerca de Mí</h2>
-    <div class="about-content">
-        <p>
-            Soy Joel Garbagnate, un desarrollador Full Stack apasionado por la tecnología y la creación de soluciones innovadoras.
-            Cuento con experiencia en tecnologías como 
-            <span class="neon-effect">.NET</span>, 
-            <span class="neon-effect">C#</span>, 
-            <span class="neon-effect">JavaScript</span>, 
-            <span class="neon-effect">HTML</span>, 
-            <span class="neon-effect">CSS</span>, 
-            <span class="neon-effect">PHP</span>, 
-            <span class="neon-effect">Blazor</span>, 
-            <span class="neon-effect">Symfony</span>, 
-            <span class="neon-effect">Python</span>, 
-            y <span class="neon-effect">bases de datos SQL</span>.
-        </p>
-        <p>
-            Estoy en constante formación y actualización en el área de tecnología. Actualmente, curso la Tecnicatura Superior en Programación, 
-            con la meta de continuar mi formación y completar la Ingeniería en Software una vez finalizada la tecnicatura.
-        </p>
-        <p>
-            Más allá de mi interés por el desarrollo de software, disfruto explorando nuevas tecnologías, enfrentando proyectos desafiantes 
-            y perfeccionando mis habilidades en lógica de programación, diseño y arquitectura de software.
-        </p>        
-    </div>
-</section>
-
-<!-- Sección de proyectos -->
-<section id="proyectos" class="projects-section">
-    <h2>Proyectos Destacados</h2>
-    <div class="projects-grid">
-        <!-- Proyecto 1: Consultora CIPEF -->
-        <div class="project-card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="assets/images/CIPEF.png" alt="Consultora CIPEF">
-                    <h3>Consultora CIPEF</h3>
+    <main>
+        <section class="hero-section">
+            <div class="section-shell hero-layout">
+                <div class="hero-copy">
+                    <p class="eyebrow">Liderazgo IT. Desarrollo. Analisis funcional.</p>
+                    <h1>Conecto gestion, negocio y desarrollo para construir sistemas solidos, seguros y escalables.</h1>
+                    <p class="hero-lead">
+                        Soy Joel Garbagnate. Hoy combino experiencia en desarrollo full stack, analisis funcional,
+                        coordinacion tecnica e iniciativas de ciberseguridad para mejorar operacion, procesos y toma de decisiones.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#experience">Ver experiencia</a>
+                        <a class="button button-secondary" href="https://drive.google.com/uc?export=download&id=17_XnN3ZbTMRhnjXBH7qEdzZcbF1XYT6L" target="_blank" rel="noreferrer" download>Descargar CV</a>
+                        <a class="button button-secondary" href="#contact">Hablemos</a>
+                    </div>
+                    <div class="hero-metrics">
+                        <article class="metric-card" data-reveal="up" data-count-card>
+                            <span class="metric-value" data-count="4">0</span>
+                            <span class="metric-suffix">roles entre desarrollo, analisis y gestion IT</span>
+                        </article>
+                        <article class="metric-card" data-reveal="up" data-count-card>
+                            <span class="metric-value" data-count="6">0</span>
+                            <span class="metric-suffix">experiencias profesionales en entornos reales</span>
+                        </article>
+                        <article class="metric-card" data-reveal="up" data-count-card>
+                            <span class="metric-value" data-count="4">0</span>
+                            <span class="metric-suffix">frentes clave: desarrollo, liderazgo, seguridad y procesos</span>
+                        </article>
+                    </div>
                 </div>
-                <div class="card-back">
-                    <p>Sitio web desarrollado con WordPress y Elementor, especializado en consultoría profesional.</p>
-                    <p><strong>Tecnologías:</strong> WordPress, PHP, Elementor, Plugins, HTML, CSS</p>
-                    <a href="https://consultoracipef.com.ar/" target="_blank" class="btn">Visitar Sitio</a>
+
+                <aside class="hero-panel">
+                    <div class="panel-topline">Hoy enfocado en</div>
+                    <div class="panel-stack">
+                        <span>.NET</span>
+                        <span>PHP</span>
+                        <span>Symfony</span>
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                        <span>SQL</span>
+                        <span>Ciberseguridad</span>
+                        <span>AWS</span>
+                    </div>
+                    <div class="hero-surface">
+                        <div class="surface-line">
+                            <span>Gestion IT</span>
+                            <strong>Continuidad, soporte, infraestructura</strong>
+                        </div>
+                        <div class="surface-line">
+                            <span>Analisis</span>
+                            <strong>Requerimientos, documentacion, procesos</strong>
+                        </div>
+                        <div class="surface-line">
+                            <span>Entrega tecnica</span>
+                            <strong>Backend, integraciones, modernizacion</strong>
+                        </div>
+                    </div>
+                    <div class="availability-card">
+                        <span class="availability-dot"></span>
+                        <div>
+                            <strong>Perfil orientado a liderazgo tecnico con ejecucion real.</strong>
+                            <p>Operacion, software, mejora de procesos y decisiones con impacto.</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <div class="section-shell section-grid">
+                <div class="section-heading" data-reveal="up">
+                    <p class="eyebrow">Perfil</p>
+                    <h2>Perfil tecnico con criterio de producto.</h2>
+                </div>
+                <div class="section-copy" data-reveal="up">
+                    <p>
+                        Mi perfil evoluciono desde desarrollo full stack hacia roles con mayor peso en analisis, coordinacion
+                        y gestion de sistemas. Trabajo bien donde conviven operacion, software, usuarios internos y decisiones de negocio.
+                    </p>
+                    <p>
+                        No me limito a programar. Relevo requerimientos, documento, priorizo, acompano equipos tecnicos y
+                        participo en definiciones de seguridad, continuidad operativa, automatizacion y mejora de procesos.
+                    </p>
                 </div>
             </div>
-        </div>
 
-        <!-- Proyecto 2: Restaurante Portico -->
-        <div class="project-card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="assets/images/PORTICO.png" alt="Restaurante Portico">
-                    <h3>Restaurante Portico</h3>
+            <div class="section-shell principle-grid">
+                <article class="principle-card" data-reveal="up">
+                    <span class="principle-index">01</span>
+                    <h3>Vision integral</h3>
+                    <p>Entiendo software, infraestructura, usuarios, operacion y prioridades de negocio.</p>
+                </article>
+                <article class="principle-card" data-reveal="up">
+                    <span class="principle-index">02</span>
+                    <h3>Analisis con criterio</h3>
+                    <p>Requerimientos claros, documentacion util y soluciones aterrizadas a contexto real.</p>
+                </article>
+                <article class="principle-card" data-reveal="up">
+                    <span class="principle-index">03</span>
+                    <h3>Ejecucion tecnica</h3>
+                    <p>Backend, APIs, bases de datos, modernizacion y resolucion de problemas complejos.</p>
+                </article>
+                <article class="principle-card" data-reveal="up">
+                    <span class="principle-index">04</span>
+                    <h3>Continuidad y seguridad</h3>
+                    <p>Backup, contingencia, riesgo, estabilidad y disponibilidad como parte del trabajo.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="positioning" class="content-section section-accent">
+            <div class="section-shell position-layout">
+                <div class="position-intro" data-reveal="up">
+                    <p class="eyebrow">Enfoque</p>
+                    <h2>No vendo proyectos sueltos. Aporto criterio para sostener, ordenar y evolucionar sistemas reales.</h2>
+                    <p class="section-note">
+                        Mi mejor trabajo vive en operaciones, plataformas internas, modernizaciones y decisiones tecnicas
+                        que no siempre se pueden publicar, pero si se pueden liderar.
+                    </p>
                 </div>
-                <div class="card-back">
-                    <p>Restaurante creado con una arquitectura robusta y diseño responsivo.</p>
-                    <p><strong>Tecnologías:</strong> .NET 8, SQL, Bootstrap, JS, HTML, CSS</p>
-                    <a href="https://restauranteporticobarcelona.es/" target="_blank" class="btn">Visitar Sitio</a>
+
+                <div class="statement-card" data-reveal="up">
+                    <p class="statement-line">Gestiono continuidad.</p>
+                    <p class="statement-line">Aclaro requerimientos.</p>
+                    <p class="statement-line">Ejecuto con base tecnica.</p>
+                    <p class="statement-caption">Perfil orientado a responsabilidad real, no solo entrega visual.</p>
                 </div>
             </div>
-        </div>
 
-        <!-- Proyecto 3: XR Neurosalud -->
-        <div class="project-card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="assets/images/XR.png" alt="XR Neurosalud">
-                    <h3>XR Neurosalud</h3>
-                </div>
-                <div class="card-back">
-                    <p>Portal para logopedas y pacientes con sesiones, citas, calendario, documentos y gráficos personalizados.</p>
-                    <p><strong>Tecnologías:</strong> .NET 6, SQL, Bootstrap, JS, librerías personalizadas</p>
-                    <a href="https://neurosaludxr.com/" target="_blank" class="btn">Visitar Sitio</a>
+            <div class="section-shell manifesto-grid">
+                <article class="manifesto-card manifesto-card-wide" data-reveal="up">
+                    <span class="manifesto-label">01 / Liderazgo operativo</span>
+                    <h3>Tomo ownership sobre sistemas, soporte, infraestructura y estabilidad.</h3>
+                    <p>Priorizacion, coordinacion, proveedores, continuidad y foco en que negocio pueda operar sin friccion innecesaria.</p>
+                </article>
+
+                <article class="manifesto-card" data-reveal="up">
+                    <span class="manifesto-label">02 / Analisis funcional</span>
+                    <h3>Bajo complejidad a decisiones claras.</h3>
+                    <p>Relevamiento, documentacion, casos de uso, mejora de procesos y alineacion entre usuarios y equipos tecnicos.</p>
+                </article>
+
+                <article class="manifesto-card" data-reveal="up">
+                    <span class="manifesto-label">03 / Ejecucion tecnica</span>
+                    <h3>No me quedo en estrategia.</h3>
+                    <p>Backend, APIs, datos, integraciones, modernizacion y resolucion de problemas donde los detalles importan.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="expertise" class="content-section">
+            <div class="section-shell section-header-row">
+                <div data-reveal="up">
+                    <p class="eyebrow">Expertise</p>
+                    <h2>Donde aporto mas valor.</h2>
                 </div>
             </div>
+
+            <div class="section-shell expertise-grid">
+                <article class="expertise-card" data-reveal="up">
+                    <h3>Liderazgo y gestion IT</h3>
+                    <p>Coordinacion de soporte e infraestructura, proveedores, prioridades operativas y continuidad de servicios.</p>
+                </article>
+                <article class="expertise-card" data-reveal="up">
+                    <h3>Analisis y procesos</h3>
+                    <p>Ingenieria de requerimientos, relevamiento con usuarios clave, documentacion y diseno de soluciones internas.</p>
+                </article>
+                <article class="expertise-card" data-reveal="up">
+                    <h3>Ciberseguridad y continuidad</h3>
+                    <p>Backup, contingencia, analisis de riesgos, control de accesos y resguardo de disponibilidad operativa.</p>
+                </article>
+                <article class="expertise-card" data-reveal="up">
+                    <h3>Desarrollo y datos</h3>
+                    <p>PHP, Symfony, C#, .NET, Python, SQL, MySQL, SQL Server, Redis, APIs REST e integracion de servicios.</p>
+                </article>
+            </div>
+
+            <div class="section-shell toolbelt-card" data-reveal="up">
+                <p class="eyebrow">Stack</p>
+                <div class="toolbelt">
+                    <span>.NET</span>
+                    <span>C#</span>
+                    <span>PHP</span>
+                    <span>Symfony</span>
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                    <span>Blazor</span>
+                    <span>SQL Server</span>
+                    <span>MySQL</span>
+                    <span>MongoDB</span>
+                    <span>Redis</span>
+                    <span>AWS</span>
+                    <span>Azure DevOps</span>
+                    <span>JIRA</span>
+                    <span>Swagger</span>
+                    <span>WordPress</span>
+                    <span>Ciberseguridad</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="content-section section-accent">
+            <div class="section-shell section-header-row">
+                <div data-reveal="up">
+                    <p class="eyebrow">Experiencia</p>
+                    <h2>Contextos donde ya entregue.</h2>
+                </div>
+            </div>
+
+            <div class="section-shell timeline">
+                <div class="timeline-progress" data-timeline-progress></div>
+                <article class="timeline-item" data-reveal="left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-topline">
+                            <h3>Fapersa ICSA</h3>
+                            <span>Ene 2026 - Actualidad</span>
+                        </div>
+                        <p class="timeline-role">Gerente de Sistemas IT / Consultor Externo - Hibrido</p>
+                        <p>Lidero area de Sistemas IT, coordinando soporte e infraestructura, prioridades operativas, proveedores, servidores, conectividad y continuidad de la compania.</p>
+                        <p>Relevo y documento requerimientos del negocio, diseno mejoras internas y participo en iniciativas de ciberseguridad, backup, contingencia, riesgos e IA aplicada a procesos.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item" data-reveal="left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-topline">
+                            <h3>Ministerio de Salud de la Provincia de Santa Fe</h3>
+                            <span>Ago 2024 - Actualidad</span>
+                        </div>
+                        <p class="timeline-role">Full Stack PHP Ssr Developer - Presencial</p>
+                        <p>Integro desarrollo de la Sectorial de Informatica, participando en migracion y modernizacion de sistemas heredados hacia tecnologias actuales.</p>
+                        <p>Desarrollo scripts de bases de datos relacionales, trabajo con Scrum y resuelvo problemas mediante programacion funcional y algoritmica.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item" data-reveal="left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-topline">
+                            <h3>Niveltic</h3>
+                            <span>Sep 2025 - Nov 2025</span>
+                        </div>
+                        <p class="timeline-role">Analista Funcional - Remoto</p>
+                        <p>Transicion interna desde Full Stack Developer hacia Analista Funcional, con entrevistas a clientes, toma de requerimientos y confeccion de documentacion para analisis y diseno.</p>
+                        <p>Apoyo a equipos tecnicos en decisiones, ampliacion de casos de uso, mejora de sistemas y coordinacion con stakeholders.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item" data-reveal="left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-topline">
+                            <h3>Niveltic</h3>
+                            <span>Abr 2025 - Sep 2025</span>
+                        </div>
+                        <p class="timeline-role">Full Stack Developer - Remoto</p>
+                        <p>Integracion de APIs para interoperabilidad y escalabilidad en entornos AWS, implementando mejoras de rendimiento y reduccion de errores en sistemas productivos.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item" data-reveal="left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-topline">
+                            <h3>XRNeuroSalud</h3>
+                            <span>Jun 2023 - Nov 2024</span>
+                        </div>
+                        <p class="timeline-role">Full Stack Developer .NET Core - Remoto</p>
+                        <p>Desarrolle sistema web desde cero cubriendo ciclo completo de desarrollo, integracion con plataformas externas mediante APIs y coordinacion con equipos multidisciplinarios de VR.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item" data-reveal="left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-topline">
+                            <h3>NeyTI SAS</h3>
+                            <span>Jun 2024 - Oct 2024</span>
+                        </div>
+                        <p class="timeline-role">Frontend Blazor Ssr .NET Developer - Remoto</p>
+                        <p>Desarrollo de interfaces con C#, Blazor WebAssembly y Syncfusion, integracion de APIs REST, documentacion con Swagger y colaboracion agil con JIRA y Azure DevOps.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item" data-reveal="left">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-topline">
+                            <h3>Servicios Viales</h3>
+                            <span>Ene 2023 - Jun 2023</span>
+                        </div>
+                        <p class="timeline-role">Desarrollador Web Full Stack - Presencial</p>
+                        <p>Maquetacion y desarrollo web con HTML, CSS, JavaScript y WordPress, implementacion de APIs y scripts en C#, y gestion de bases SQL Server para operaciones seguras y eficientes.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="section-shell contact-grid">
+                <div class="contact-copy" data-reveal="up">
+                    <p class="eyebrow">Contacto</p>
+                    <h2>Si necesitas alguien que entienda sistemas, negocio y ejecucion tecnica, conversemos.</h2>
+                    <p>
+                        Buen encaje para liderazgo IT, analisis funcional, modernizacion de sistemas, integraciones y mejora operativa.
+                    </p>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/joel-garbagnate-platini/" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a href="https://api.whatsapp.com/send?phone=543424276286" target="_blank" rel="noreferrer">WhatsApp</a>
+                        <a href="https://drive.google.com/uc?export=download&id=17_XnN3ZbTMRhnjXBH7qEdzZcbF1XYT6L" target="_blank" rel="noreferrer" download>Descargar CV</a>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/mwppwvyy" method="POST" class="contact-form" data-reveal="up">
+                    <input type="hidden" name="_subject" value="Nuevo contacto desde portafolio">
+                    <label>
+                        Nombre
+                        <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" placeholder="tu@email.com" required>
+                    </label>
+                    <label>
+                        Mensaje
+                        <textarea name="mensaje" rows="6" placeholder="Contame que estas construyendo" required></textarea>
+                    </label>
+                    <button class="button button-primary" type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-shell footer-row">
+            <p>Joel Garbagnate</p>
+            <p>Liderazgo de Sistemas IT</p>
         </div>
-    </div>
-</section>
-
-
-<!-- Sección de habilidades -->
-<section id="habilidades" class="skills-section">
-    <h2>Habilidades</h2>
-    <ul class="skills-list">
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>Blazor</li>
-        <li>.NET</li>
-        <li>PHP</li>
-        <li>Symfony</li>
-        <li>MySQL</li>
-        <li>SQL</li>
-        <li>Python</li>
-        <li>Amazon Web Services</li>
-    </ul>
-</section>
-
-<canvas id="skillsChart" width="300" height="300"></canvas>
-
-
-<!-- Sección de experiencia -->
-<section id="experiencia" class="experience-section">
-    <h2>Experiencia</h2>
-    <div class="experience-timeline">
-         <!-- Gobierno de la Provincia de Santa Fe -->
-        <div class="timeline-item">
-            <h3>
-                <a href="https://www.santafe.gov.ar/" target="_blank" class="experience-link">
-                    Desarrollador Full Stack PHP y Symfony | Gobierno de la Provincia de Santa Fe
-                </a>
-            </h3>
-            <span>Septiembre 2024 - Presente</span>
-            <p>Desempeño en la sectorial de informática del Ministerio de Salud. Gestión y migración de proyectos internos, desarrollo de nuevas funcionalidades y pantallas, y aplicación de seguridad. Integración de servicios externos entre ministerios para optimizar los sistemas de gestión.</p>
-        </div>
-        <!-- e-tradeconsult -->
-        <div class="timeline-item">
-            <h3>
-                <a href="https://www.niveltic.com/" target="_blank" class="experience-link">
-                    Desarrollador Full Stack | Niveltic
-                </a>
-            </h3>
-            <span>Abril 2025 - Noviembre 2025</span> 
-            <p>Desarrollé proyectos de alta demanda técnica con backend en PHP y Python, uso de Slim Framework, Redis, AWS y MongoDB. Migración e integración de sistemas mediante APIs, manejo de caché, cookies y almacenamiento local para optimizar el rendimiento y la experiencia del usuario.</p>
-        </div>
-        <!-- NeyTI SAS -->
-        <div class="timeline-item">
-            <h3>
-                <a href="https://neyti.com.ar/wp/" target="_blank" class="experience-link">
-                    Frontend Blazor Developer | NeyTI SAS
-                </a>
-            </h3>
-            <span>Junio 2024 - Octubre 2024</span>
-            <p>Desarrollo de aplicaciones web con Blazor y Syncfusion. Integración de APIs y manejo de proyectos mediante Azure DevOps y JIRA. Uso de Swagger para documentar APIs y SQL Server para gestión de datos.</p>
-        </div>
-        <!-- XRNeurosalud -->
-        <div class="timeline-item">
-            <h3>
-                <a href="https://neurosaludxr.com/" target="_blank" class="experience-link">
-                    Full Stack Developer | XRNeurosalud
-                </a>
-            </h3>
-            <span>Julio 2023 - Septiembre 2024</span>
-            <p>Desarrollo de un sistema web para logopedas. Implementación de calendarios personalizados, gráficos interactivos, y autenticación mediante JWT. Uso de tecnologías como .NET 6, SQL, Razor Pages, Chart.js, Full Calendar y Azure DevOps.</p>
-        </div>
-        <!-- Servicios Viales -->
-        <div class="timeline-item">
-            <h3>
-                <a href="https://sv.com.ar/" target="_blank" class="experience-link">
-                    Desarrollador Web Full Stack | Servicios Viales
-                </a>
-            </h3>
-            <span>Enero 2023 - Junio 2023</span>
-            <p>Planificación y desarrollo de sitios web con HTML, CSS, JavaScript y WordPress. Implementación de bases de datos SQL y generación de informes avanzados en Excel con macros. Evaluación de plataformas Low Code como Genexus.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Sección de contacto -->
-<section id="contacto" class="contact-section">
-    <h2 style="color:#ffffff">Contacto</h2>
-    <form action="https://formspree.io/f/mwppwvyy" method="POST" class="contact-form">
-        <div class="form-group">
-            <label for="nombre">Tu Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre..." required>
-        </div>
-        
-        <div class="form-group">
-            <label for="email">Tu Correo Electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="Escribe tu correo..." required>
-        </div>
-        
-        <div class="form-group">
-            <label for="mensaje">Tu Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
-        </div>
-        
-        <button type="submit" class="btn-contacto">Enviar</button>
-    </form>
-</section>
-
-
-<footer class="footer">
-    <div class="footer-container">
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/joel-garbagnate-platini/" target="_blank" class="footer-link">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24px" height="24px">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.372c-.966 0-1.75-.783-1.75-1.749s.784-1.749 1.75-1.749c.965 0 1.75.783 1.75 1.749s-.785 1.749-1.75 1.749zm13.5 11.372h-3v-5.539c0-3.367-4-3.108-4 0v5.539h-3v-10h3v1.422c1.396-2.586 7-2.777 7 2.476v6.102z"/>
-            </svg>
-            LinkedIn
-        </a>
-        <!-- WhatsApp -->
-        <a href="https://api.whatsapp.com/send?phone=543424276286" target="_blank" class="footer-link">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24px" height="24px" fill="white">
-                <path d="M16.01 3.57c-6.9 0-12.5 5.6-12.5 12.5 0 2.19.58 4.29 1.68 6.15l-1.8 6.6 6.8-1.78c1.8 1 3.8 1.57 5.82 1.57 6.9 0 12.5-5.6 12.5-12.5 0-6.89-5.61-12.49-12.5-12.49zm0 23.59c-1.82 0-3.58-.46-5.14-1.33l-.37-.21-4.06 1.06 1.08-4.01-.25-.41c-1.05-1.76-1.61-3.79-1.61-5.88 0-6.02 4.9-10.91 10.92-10.91 6.02 0 10.91 4.89 10.91 10.91 0 6.01-4.9 10.91-10.91 10.91zm5.69-7.56c-.31-.16-1.83-.91-2.11-1.01-.28-.1-.49-.15-.7.15-.2.31-.81 1-1 1.2-.18.2-.36.22-.66.07-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.81-1.71-2.11-.18-.31-.02-.48.14-.63.15-.15.31-.36.46-.54.15-.18.2-.31.31-.52.1-.2.05-.38-.02-.53-.08-.15-.7-1.7-.95-2.31-.25-.61-.51-.53-.7-.53-.18 0-.39-.02-.61-.02-.22 0-.56.08-.85.38-.29.31-1.12 1.09-1.12 2.66 0 1.56 1.14 3.07 1.3 3.28.15.2 2.23 3.4 5.41 4.76.76.33 1.35.53 1.81.68.76.24 1.45.21 2 .13.61-.09 1.83-.75 2.09-1.47.26-.71.26-1.32.18-1.46-.08-.13-.28-.2-.59-.36z"/>
-            </svg>
-            WhatsApp
-        </a>
-    </div>
-</footer>
-
-<script src="js/scripts.js">
-    gsap.registerPlugin(ScrollTrigger);
-</script>
-<script src="js/skillsChart.js"></script>
-    
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        gsap.to(".darkroom-sign-container", {
-            y: 150,
-            duration: 2,
-            ease: "bounce.out"
-        });
-
-        gsap.to(".darkroom-sign", {
-            rotation: -5,
-            yoyo: true,
-            repeat: -1,
-            ease: "power1.inOut",
-            duration: 3
-        });
-
-        // Generar partículas de polvo
-        function createDust() {
-            const dustContainer = document.querySelector(".dust-container");
-            for (let i = 0; i < 15; i++) {
-                let dust = document.createElement("div");
-                dust.classList.add("dust");
-                dust.style.left = Math.random() * 100 + "vw";
-                dust.style.top = Math.random() * 30 + "vh";
-                dustContainer.appendChild(dust);
-                
-                gsap.to(dust, {
-                    y: 100,
-                    opacity: 1,
-                    duration: Math.random() * 3 + 2,
-                    ease: "linear",
-                    repeat: -1,
-                    delay: Math.random() * 5
-                });
-            }
-        }
-
-        createDust();
-    });
-</script>
+    </footer>
 </body>
 </html>
