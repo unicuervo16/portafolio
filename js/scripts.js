@@ -12,25 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollExitCards = document.querySelectorAll("[data-scroll-exit]");
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const root = document.documentElement;
-    root.classList.add("force-motion");
-
-    const debugBadge = document.createElement("div");
-    debugBadge.textContent = `JS OK | reduce=${prefersReducedMotion ? "on" : "off"} | motion forced`;
-    Object.assign(debugBadge.style, {
-        position: "fixed",
-        top: "12px",
-        right: "12px",
-        zIndex: "99999",
-        padding: "10px 12px",
-        background: "#ff2d2d",
-        color: "#ffffff",
-        font: '700 12px/1.2 "IBM Plex Mono", monospace',
-        borderRadius: "10px",
-        boxShadow: "0 10px 28px rgba(0, 0, 0, 0.35)",
-        letterSpacing: "0.04em",
-        textTransform: "uppercase"
-    });
-    document.body.appendChild(debugBadge);
 
     const syncHeader = () => {
         if (!header) {
@@ -87,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     syncHeader();
     window.addEventListener("scroll", syncHeader, { passive: true });
 
-    if (prefersReducedMotion && !root.classList.contains("force-motion")) {
+    if (prefersReducedMotion) {
         revealAll();
         return;
     }

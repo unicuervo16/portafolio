@@ -1289,18 +1289,18 @@ main,
 }
 
 @media (prefers-reduced-motion: reduce) {
-    html:not(.force-motion) {
+    html {
         scroll-behavior: auto;
     }
 
-    html:not(.force-motion) *,
-    html:not(.force-motion) *::before,
-    html:not(.force-motion) *::after {
+    *,
+    *::before,
+    *::after {
         animation: none !important;
         transition: none !important;
     }
 
-    html:not(.force-motion) [data-reveal] {
+    [data-reveal] {
         opacity: 1;
         transform: none;
     }
