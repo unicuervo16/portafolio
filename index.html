@@ -9,13 +9,12 @@
     <meta property="og:image" content="assets/images/XR.png">
     <meta name="twitter:card" content="summary_large_image">
     <title>Joel Garbagnate | Sistemas IT y Desarrollo</title>
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-    <script src="js/scripts.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=20260521e">
+    <script src="js/scripts.js?v=20260521e" defer></script>
 </head>
 <body id="top">
     <div class="scroll-progress" data-scroll-progress></div>
@@ -58,7 +57,7 @@
 
     <main>
         <section class="hero-section">
-            <div class="section-shell hero-layout">
+            <div class="section-shell hero-layout" data-scroll-exit>
                 <div class="hero-copy">
                     <p class="eyebrow">Liderazgo IT. Desarrollo. Analisis funcional.</p>
                     <h1>Conecto gestion, negocio y desarrollo para construir sistemas solidos, seguros y escalables.</h1>
@@ -125,7 +124,7 @@
         </section>
 
         <section id="about" class="content-section">
-            <div class="section-shell section-grid">
+            <div class="section-shell section-grid" data-scroll-exit>
                 <div class="section-heading" data-reveal="up">
                     <p class="eyebrow">Perfil</p>
                     <h2>Perfil tecnico con criterio de producto.</h2>
@@ -142,7 +141,7 @@
                 </div>
             </div>
 
-            <div class="section-shell principle-grid">
+            <div class="section-shell principle-grid" data-scroll-exit>
                 <article class="principle-card" data-reveal="up">
                     <span class="principle-index">01</span>
                     <h3>Vision integral</h3>
@@ -167,7 +166,7 @@
         </section>
 
         <section id="positioning" class="content-section section-accent">
-            <div class="section-shell position-layout">
+            <div class="section-shell position-layout" data-scroll-exit>
                 <div class="position-intro" data-reveal="up">
                     <p class="eyebrow">Enfoque</p>
                     <h2>No vendo proyectos sueltos. Aporto criterio para sostener, ordenar y evolucionar sistemas reales.</h2>
@@ -185,7 +184,7 @@
                 </div>
             </div>
 
-            <div class="section-shell manifesto-grid">
+            <div class="section-shell manifesto-grid" data-scroll-exit>
                 <article class="manifesto-card manifesto-card-wide" data-reveal="up">
                     <span class="manifesto-label">01 / Liderazgo operativo</span>
                     <h3>Tomo ownership sobre sistemas, soporte, infraestructura y estabilidad.</h3>
@@ -207,14 +206,14 @@
         </section>
 
         <section id="expertise" class="content-section">
-            <div class="section-shell section-header-row">
+            <div class="section-shell section-header-row" data-scroll-exit>
                 <div data-reveal="up">
                     <p class="eyebrow">Expertise</p>
                     <h2>Donde aporto mas valor.</h2>
                 </div>
             </div>
 
-            <div class="section-shell expertise-grid">
+            <div class="section-shell expertise-grid" data-scroll-exit>
                 <article class="expertise-card" data-reveal="up">
                     <h3>Liderazgo y gestion IT</h3>
                     <p>Coordinacion de soporte e infraestructura, proveedores, prioridades operativas y continuidad de servicios.</p>
@@ -233,7 +232,7 @@
                 </article>
             </div>
 
-            <div class="section-shell toolbelt-card" data-reveal="up">
+            <div class="section-shell toolbelt-card" data-reveal="up" data-scroll-exit>
                 <p class="eyebrow">Stack</p>
                 <div class="toolbelt">
                     <span>.NET</span>
@@ -357,7 +356,7 @@
         </section>
 
         <section id="contact" class="content-section">
-            <div class="section-shell contact-grid">
+            <div class="section-shell contact-grid" data-scroll-exit>
                 <div class="contact-copy" data-reveal="up">
                     <p class="eyebrow">Contacto</p>
                     <h2>Si necesitas alguien que entienda sistemas, negocio y ejecucion tecnica, conversemos.</h2>

@@ -1080,9 +1080,44 @@ main,
     color: var(--muted);
 }
 
-[data-reveal] {
+.js.motion-enabled [data-reveal] {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translate3d(0, 20px, 0);
+    transition: opacity 0.85s ease, transform 0.85s ease;
+}
+
+.js.motion-enabled [data-reveal="left"] {
+    transform: translate3d(-34px, 0, 0);
+}
+
+.js.motion-enabled [data-reveal].is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.js.motion-enabled .scroll-exit-card.is-visible,
+.js.motion-enabled .scroll-exit-card:not([data-reveal]) {
+    --exit-x: 0px;
+    --exit-y: 0px;
+    --exit-scale: 1;
+    --exit-rotate: 0deg;
+    --tilt-x: 0deg;
+    --tilt-y: 0deg;
+    --exit-opacity: 1;
+    --exit-blur: 0px;
+    --exit-shadow: 0 24px 60px rgba(2, 6, 23, 0.34);
+    transform:
+        translate3d(var(--exit-x), var(--exit-y), 0)
+        scale(var(--exit-scale))
+        rotate(var(--exit-rotate))
+        perspective(900px)
+        rotateX(var(--tilt-x))
+        rotateY(var(--tilt-y));
+    transform-origin: top left;
+    opacity: var(--exit-opacity);
+    filter: blur(var(--exit-blur));
+    box-shadow: var(--exit-shadow);
+    will-change: transform, opacity, filter;
 }
 
 @keyframes pulse {
@@ -1254,18 +1289,18 @@ main,
 }
 
 @media (prefers-reduced-motion: reduce) {
-    html {
+    html:not(.force-motion) {
         scroll-behavior: auto;
     }
 
-    *,
-    *::before,
-    *::after {
+    html:not(.force-motion) *,
+    html:not(.force-motion) *::before,
+    html:not(.force-motion) *::after {
         animation: none !important;
         transition: none !important;
     }
 
-    [data-reveal] {
+    html:not(.force-motion) [data-reveal] {
         opacity: 1;
         transform: none;
     }
